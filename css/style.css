@@ -1,0 +1,315 @@
+/* CSS Variables */
+:root {
+  --color-dark: #010101;
+  --color-light: #f8f8fa;
+  --color-primary: #0d6efd;
+  --navbar-height: 60px;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: white;
+  padding-top: var(--navbar-height);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 7%;
+  border-bottom: 1px solid var(--color-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #f8f8fa;
+}
+
+.navbar .navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0px 2px 2px rgba(5, 20, 20, 0.5);
+  font-size: 2rem;
+  font-weight: 900;
+  color: #00179c;
+}
+
+.navbar .container .nav {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.nav-link {
+  color: black !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #555 !important;
+}
+
+.nav-link.active {
+  color: #000 !important;
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/home_bg.png") center/cover no-repeat;
+  filter: blur(12px) brightness(0.5);
+  transform: scale(1.1);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+/* Footer */
+.social-links a {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.social-links .email i {
+  color: #000;
+}
+
+.social-links .github i {
+  color: #000;
+}
+
+.social-links .linkedin i {
+  color: #0A66C2;
+}
+
+.social-links .youtube i {
+  color: #FF0000;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+/* Project Cards */
+.card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+}
+
+/* Tower Defense Placeholder */
+.placeholder-td {
+  background-color: #000;
+  height: 220px;
+  border-radius: 4px;
+}
+
+/* Inventory Page */
+.inventory-hero {
+  height: 300px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("../img/inventory-hero.png") center/cover no-repeat;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+/* About Page */
+.skills-card-text {
+  color: #212529;
+}
+
+/* Responsive Design */
+/* Tablet and below (768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 5%;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-item {
+    padding: 5px 8px;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem !important;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .placeholder-td {
+    height: 180px;
+  }
+
+  .inventory-hero {
+    height: 200px;
+  }
+}
+
+/* Mobile (576px and below) */
+@media (max-width: 576px) {
+  body {
+    padding-top: 100px; /* Navbar height increases on mobile */
+  }
+
+  .navbar {
+    padding: 10px 3%;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-item {
+    padding: 5px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem !important;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .hero-content h2 {
+    font-size: 1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .hero-content .btn {
+    padding: 0.5rem 1.5rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+    margin: 0 5px !important;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .placeholder-td {
+    height: 150px;
+  }
+
+  .inventory-hero {
+    height: 150px;
+  }
+
+  /* About page adjustments */
+  .col-lg-4,
+  .col-lg-8,
+  .col-lg-6 {
+    padding: 0 15px;
+  }
+
+  .badge {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+  .navbar .container {
+    max-width: 1400px;
+  }
+
+  .hero {
+    height: 85vh;
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  footer,
+  .social-links {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+    padding-top: 0;
+  }
+
+  .hero-bg {
+    filter: none;
+  }
+}

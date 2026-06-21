@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Recent Projects | Shun-min Hsieh</title>
+    <meta
+      name="description"
+      content="Explore the recent projects of Shun-min Hsieh."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Shun-min Hsieh | Game Programmer Portfolio" />
+    <meta property="og:description" content="Unity Game Programmer Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/preview.png" />
+    <meta property="og:url" content="https://sh960440.github.io/portfolio/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar py-3" style="background-color: #f8f8fa">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand fw-bold" href="index.html">SHUN-MIN HSIEH</a>
+
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="projects.html">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="legacy.html">LEGACY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <section class="projects-header text-center mt-5 pt-4">
+      <h1 class="fw-bold">Recent Projects</h1>
+    </section>
+
+    <section class="container my-5">
+
+      <div class="row g-4">
+
+        <!-- Inventory System -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <img src="img/inventory-thumbnail.png" class="card-img-top" alt="Inventory System Screenshot">
+
+            <div class="card-body">
+              <h3 class="card-title fw-bold">Reusable Inventory System</h3>
+
+              <p class="card-text text-muted">
+                A modular, reusable inventory system built in Unity. Designed for flexibility, clean architecture, and easy integration into any project.
+              </p>
+
+              <ul class="text-muted small">
+                <li>Modular item architecture (ScriptableObjects)</li>
+                <li>Drag & drop UI with dynamic slot handling</li>
+                <li>Runtime item data + stackable items</li>
+                <li>Clean separation of UI / logic / data</li>
+              </ul>
+
+              <div class="mt-3">
+                <a href="inventory.html" class="btn btn-dark btn-sm">View Details →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TD Game -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <!-- <img src="img/placeholder-td.png" class="card-img-top" alt="Tower Defense Placeholder"> -->
+            <div class="placeholder-td d-flex align-items-center justify-content-center flex-column">
+              <span class="text-white fw-bold">TOWER DEFENSE GAME</span>
+              <span class="text-white small">WORK IN PROGRESS...</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title fw-bold">Tower Defense Game</h3>
+
+              <p class="card-text text-muted">
+                A small tower defense game I'm currently building to explore gameplay systems, enemy waves, and tower mechanics.
+              </p>
+
+              <a class="btn btn-outline-dark btn-sm disabled mt-2">In Development</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4" style="background-color: #f8f8fa;">
+      <div class="container text-center">
+        <div class="mb-3 social-links">
+          <a href="mailto:sh960440@gmail.com" class="mx-2 email">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+          <a href="https://github.com/sh960440" class="mx-2 github">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/shun-min-hsieh-b8a76b166/" class="mx-2 linkedin">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://youtube.com/playlist?list=PLE5NE7yeOQR6OZbv3dW4vCkKGmFOtLgiM&si=_cCBBaSSwA2jwL-O" class="mx-2 youtube">
+            <i class="bi bi-youtube"></i>
+          </a>
+        </div>
+
+        <p class="text-muted small mb-0">
+          &copy; 2026 Shun-min Hsieh. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

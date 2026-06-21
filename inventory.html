@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Projects | Shun-min Hsieh</title>
+    <meta
+      name="description"
+      content="Explore the projects of Shun-min Hsieh."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Shun-min Hsieh | Game Programmer Portfolio" />
+    <meta property="og:description" content="Unity Game Programmer Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/preview.png" />
+    <meta property="og:url" content="https://sh960440.github.io/portfolio/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar py-3" style="background-color: #f8f8fa">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand fw-bold" href="index.html">SHUN-MIN HSIEH</a>
+
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="projects.html">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="legacy.html">LEGACY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <section class="inventory-hero text-center text-white d-flex align-items-center justify-content-center">
+      <div>
+        <h1 class="fw-bold display-5">Reusable Inventory System</h1>
+        <p class="lead mt-3">A modular inventory module built for reuse across future titles.</p>
+      </div>
+    </section>
+
+    <section class="container mt-4 mb-5">
+      <img src="img/inventory-thumbnail.png"
+     class="img-fluid rounded mb-4"
+     style="display: block; margin: 0 auto; max-width: 900px;">
+
+      <h2 class="mt-5">What's Included</h2>
+      <ul>
+        <li>Grid-based inventory with stacking, drag-and-drop, and stack merging.</li>
+        <li>Category filters, name search, and slot sorting.</li>
+        <li>Tooltips and context menu for item details.</li>
+        <li>Equipment system and hotbar support.</li>
+        <li>JSON-based save and load.</li>
+        <li>3D demo with pickups, consumables, equipment, and character stats.</li>
+      </ul>
+
+      <div class="text-center my-4">
+        <h5>Drag and drop</h5>
+        <img src="img/gallery-dragdrop.gif" class="img-fluid rounded shadow-sm" style="max-width: 700px;">
+      </div>
+
+      <div class="text-center my-4">
+        <h5>Category filters and sort</h5>
+        <img src="img/gallery-filters.gif" class="img-fluid rounded shadow-sm" style="max-width: 700px;">
+      </div>
+
+      <div class="text-center my-4">
+        <h5>Tooltip and context menu</h5>
+        <img src="img/gallery-tooltip.gif" class="img-fluid rounded shadow-sm" style="max-width: 700px;">
+      </div>
+
+      <div class="text-center my-4">
+        <h5>Hotbar</h5>
+        <img src="img/gallery-hotbar.gif" class="img-fluid rounded shadow-sm" style="max-width: 700px;">
+      </div>
+
+      <h2 class="mt-5">How to Run in the Unity Editor</h2>
+      <ol>
+        <li>Open the project in Unity 6 (saved with 6000.3.9f1).</li>
+        <li>Open the scene: <code>Assets/Scenes/Demo.unity</code>.</li>
+        <li>Press Play.</li>
+      </ol>
+
+      <h3 class="mt-4">Controls</h3>
+      <table class="table table-bordered w-auto">
+        <thead>
+          <tr><th>Action</th><th>Input</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Move</td><td>WASD / Arrow keys</td></tr>
+          <tr><td>Jump</td><td>Space</td></tr>
+          <tr><td>Rotate camera</td><td>Hold right mouse button</td></tr>
+          <tr><td>Zoom</td><td>Mouse wheel</td></tr>
+          <tr><td>Pick up</td><td>E</td></tr>
+          <tr><td>Toggle inventory</td><td>I</td></tr>
+          <tr><td>Split stack</td><td>X</td></tr>
+          <tr><td>Context menu</td><td>Middle mouse button</td></tr>
+        </tbody>
+      </table>
+      
+      <h3 class="mt-4">Add a New Item</h3>
+      <ol>
+        <li>Create → Inventory → Item Data / Equipment / Consumable.</li>
+        <li>Name the asset and fill the Inspector fields.</li>
+        <li>Pick a model under <code>Assets/Art/Items/Models</code> and create a GameObject.</li>
+        <li>Adjust transform so it sits correctly on the ground.</li>
+        <li>Add <code>ItemPickup</code> and assign the ScriptableObject.</li>
+        <li>Add Collider + Rigidbody (freeze rotation).</li>
+        <li>Make a prefab under <code>Assets/Prefabs</code>.</li>
+        <li>Assign the prefab to the ScriptableObject's World Prefab.</li>
+        <li>Add the asset to <code>ItemDatabase</code>.</li>
+        <li>Add the prefab to <code>DemoItemSpawner</code>.</li>
+      </ol>
+
+      <h2 class="mt-5">Links</h2>
+
+      <div class="d-flex flex-column gap-2" style="max-width: 300px;">
+        <a href="https://drive.google.com/file/d/1gjlDkpnkIBAF3gz7iZH7zzoUVXIw8dy0/view?usp=sharing" 
+          class="btn btn-light d-flex align-items-center gap-2">
+          <i class="bi bi-google"></i> PC Build
+        </a>
+
+        <a href="https://github.com/sh960440/Inventory-System" 
+          class="btn btn-light d-flex align-items-center gap-2">
+          <i class="bi bi-github"></i> GitHub Repository
+        </a>
+
+        <a href="https://youtu.be/BHaeypp2zBY" 
+          class="btn btn-light d-flex align-items-center gap-2">
+          <i class="bi bi-youtube"></i> Demo Video
+        </a>
+      </div>
+      
+      <div class="text-center mt-5">
+        <a href="projects.html" class="btn btn-dark px-4 d-inline-flex align-items-center gap-2">
+          <i class="bi bi-arrow-left"></i> Back to Projects
+        </a>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4" style="background-color: #f8f8fa;">
+      <div class="container text-center">
+        <div class="mb-3 social-links">
+          <a href="mailto:sh960440@gmail.com" class="mx-2 email">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+          <a href="https://github.com/sh960440" class="mx-2 github">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/shun-min-hsieh-b8a76b166/" class="mx-2 linkedin">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://youtube.com/playlist?list=PLE5NE7yeOQR6OZbv3dW4vCkKGmFOtLgiM&si=_cCBBaSSwA2jwL-O" class="mx-2 youtube">
+            <i class="bi bi-youtube"></i>
+          </a>
+        </div>
+
+        <p class="text-muted small mb-0">
+          &copy; 2026 Shun-min Hsieh. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
